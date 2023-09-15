@@ -1,6 +1,6 @@
 # CodSoft Internship Projects
 
-## task 1: [Chatbot with Rule-Based Responses](https://github.com/moatasem75291/CodSoft/tree/main/CHATBOT%20WITH%20RULE-BASEDRESPONSES)
+## Task 1: [Chatbot with Rule-Based Responses](https://github.com/moatasem75291/CodSoft/tree/main/CHATBOT%20WITH%20RULE-BASEDRESPONSES)
 
 Welcome to my CodSoft internship project! This project is a chatbot application built using Python and PyQt5. It allows users to interact with a chatbot that provides predefined responses to specific questions.
 
