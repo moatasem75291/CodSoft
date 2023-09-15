@@ -1,4 +1,4 @@
-# CodSoft Internship Project
+# CodSoft Internship Projects
 
 ## task 1: [Chatbot with Rule-Based Responses](https://github.com/moatasem75291/CodSoft/tree/main/CHATBOT%20WITH%20RULE-BASEDRESPONSES)
 
