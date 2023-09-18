@@ -57,8 +57,6 @@ You can customize the chatbot responses and GUI by modifying the `model.py` and 
 
 ## Task 2: [Tic-Tac-Toe AI with Minimax](https://github.com/moatasem75291/CodSoft/tree/main/TIC-TAC-TOE%20AI)
 
-Welcome to my CodSoft internship project! This project is a classic game of Tic-Tac-Toe with an unbeatable AI opponent. The AI uses the Minimax algorithm to provide a challenging gaming experience.
-
 ### Table of Contents
 
 - [Project Overview](#project-overview)
@@ -106,4 +104,3 @@ You can customize the game by adjusting the difficulty level of the AI or making
 - PyQt5: Used to create the graphical user interface (GUI) for the game.
 - Minimax Algorithm: Employed to make the AI opponent unbeatable in the game.
 
-Feel free to explore the code, make enhancements, and have fun playing Tic-Tac-Toe against the AI!
