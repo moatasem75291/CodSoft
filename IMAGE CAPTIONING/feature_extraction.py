@@ -1,28 +1,31 @@
-import tensorflow as tf
-from tensorflow.keras.applications import VGG16
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input
 import numpy as np
+import tensorflow as tf
+from tensorflow.keras.preprocessing.image import img_to_array, load_img
+from tensorflow.keras.applications.inception_v3 import InceptionV3
+from tensorflow.keras.models import Model
 
-# Load pre-trained VGG model without top classification layers
-base_model = VGG16(weights='imagenet', include_top=False)
 
-# Create a new model that takes image input and outputs features from a specific layer
-image_input = tf.keras.layers.Input(shape=(224, 224, 3))
-vgg_features = base_model(image_input)
-vgg_features = tf.keras.layers.Flatten()(vgg_features)
-image_model = Model(inputs=image_input, outputs=vgg_features)
+class FeatureExtractor:
+    def __init__(self):
+        self.model = self._load_model()
 
-# Example function for feature extraction from an image
-def extract_features(image_path):
-    img = tf.keras.preprocessing.image.load_img(image_path, target_size=(224, 224))
-    img = tf.keras.preprocessing.image.img_to_array(img)
-    img = tf.keras.applications.vgg16.preprocess_input(img)
-    img = np.expand_dims(img, axis=0)
-    features = image_model.predict(img)
-    return features
+    def _preprocess_image(self, image_path):
+        img = load_img(image_path, target_size=(299, 299))
+        img = img_to_array(img)
+        img = np.expand_dims(img, axis=0)
+        img = tf.keras.applications.inception_v3.preprocess_input(img)
+        return img
 
-# Example usage for feature extraction
-image_path = 'path_to_your_image.jpg'
-features = extract_features(image_path)
-print(features)
+    def _load_model(self):
+        inception_v3_model = InceptionV3(input_shape=(299, 299, 3))
+        inception_v3_model.layers.pop()
+        inception_v3_model = Model(
+            inputs=inception_v3_model.inputs,
+            outputs=inception_v3_model.layers[-2].output,
+        )
+        return inception_v3_model
+
+    def extract_image_features(self, image_path):
+        img = self._preprocess_image(image_path)
+        features = self.model.predict(img, verbose=0)
+        return features
