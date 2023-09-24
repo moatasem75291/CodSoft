@@ -48,4 +48,3 @@ You can customize the game by adjusting the difficulty level of the AI or making
 - Python: The primary programming language used for the game logic.
 - PyQt5: Used to create the graphical user interface (GUI) for the game.
 - Minimax Algorithm: Employed to make the AI opponent unbeatable in the game.
----
