@@ -52,5 +52,3 @@ The project is structured as follows:
 ### Customization
 
 You can customize the chatbot responses and GUI by modifying the `model.py` and `chatbot_gui.py` files. For example, you can add more predefined responses or change the GUI's appearance.
-
----
