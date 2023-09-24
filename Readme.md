@@ -7,7 +7,7 @@ Welcome to my CodSoft internship project!
 
 ### Installation
 
- . Clone the repository to your local machine:
+ 1. Clone the repository to your local machine:
 
    ```shell
    git https://github.com/moatasem75291/CodSoft.git
