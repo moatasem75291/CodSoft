@@ -26,16 +26,6 @@ Before you start using this project, ensure you have the following installed:
 - NLP
 - PyQt5
 
-### Installation
-
-To set up the project on your local machine, follow these steps:
-
-1. Clone the repository to your local machine:
-
-   ```shell
-   git clone https://github.com/yourusername/CodSoft.git
-   cd CodSoft
-   ```
 ## Project Structure
 
 The project is organized as follows:
