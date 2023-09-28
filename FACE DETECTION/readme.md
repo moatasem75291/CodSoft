@@ -43,7 +43,8 @@ Feel free to explore each component to gain a deeper understanding of the projec
 
 To make the most of the application, follow these simple steps:
 
-**1. Launch the Application: Start the application by running the following command in your terminal or command prompt:
+**1. Launch the Application:**
+Start the application by running the following command in your terminal or command prompt:
 
    ```bash
    python main.py
